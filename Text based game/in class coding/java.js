@@ -29,8 +29,15 @@ var turnorder = 0;
 
 
 
-
+// invintory testing
 var invintory = ["nothing","nothing","nothing","nothing","nothing","nothing"]
+var inv ={
+	nothing:0,
+	nothing:0,
+	cloth:0,
+
+}
+
 function check(x,y){
 	//after a location update this function ask and updates your location
 	var check = (prompt("what would you like to do"))
@@ -238,14 +245,24 @@ function Lc(x,y){
 	}else if(x == 2 && y == 0){
 		px = x;
 		py = y;
-		alert("a group of slimes come out to attack you   ")
-		check(x,y);
+		if (slime.health <= 0){
+			alert("you may go south and west you can now see light coming to your south");
+
+
+		}else{
+			alert("a group of slimes come out to attacks you   ");
+			Combat(slime.slime);
+		}
+		
+		
 	}else if(x == -1 && y == 0){
 		px = x;
 		py = y;
 		alert("");
 		check(x,y);
-	}
+	}else{
+
+	
 	
 		
 	
@@ -259,11 +276,12 @@ function Lc(x,y){
 
 
 	
+	
 	alert("Can not do that command");
 	x = px;
 	y = py;
 	Lc(x,y);
-	
+	}
 }
 
 
@@ -275,29 +293,70 @@ function Lc(x,y){
 
 
 
-var enemey= false;
-var slimehealth = 10;
-var slimeattack = 15;
+var slime ={
+	health:10,
+	attack: 1,
+	slime: "slime",
+}
+
+var currentE = ""
 
 function combatcheck(enemeyhealth){
-	var combatcheck = (promp("what would you like to do"))
+	
+	var combatcheck = prompt("what would you like to do" )
 	if (combatcheck == "attack"){
-		slimehealth -= (attack * (level * 1.25));
-		turnorder = 1;
-		combat(slime)
+		
+		alert("attack function runing");
+		enemeyhealth -= level * 1.25;
+		if (currentE == "slime"){
+			slime.health = enemeyhealth;
+		}
+		alert(enemeyhealth);
+		alert(slime.health);
+		
+		if (enemeyhealth <= 0){
+			Lc(x,y);
+
+
+		}else{
+			
+			turnorder = 1;
+			Combat(currentE);
+		}
+		
+	
+	}else{
+		alert("can not do that star fox");
+		Combat(currentE)
+
 	}
 
 }
 
 
-function combat(enemey){
+function Combat(enemey){
+	alert("runing combat")
 	if (turnorder == 0){
-		combatcheck(slimehealth);
-	}else if (enemey = slime){
-		var slimerandom = Math.floor(Math.random() * 3);
-		if (slimerandom <= 1){
+		alert("turnorder = 0");
+		if(enemey == slime.slime){
 			
+			currentE = "slime";
+			alert(slime.health);
+			combatcheck(slime.health);
 		}
+			
+
+	}else if (enemey == slime.slime && turnorder == 1){
+		
+		//var enemeyrandom = Math.floor(Math.random() * 3);
+		//if (enemeyrandom <= 2){
+			
+			
+		health -= 1;
+		alert(health);
+		turnorder = 0;
+		Combat(slime.health);
+		//}
 		
 
 	}
