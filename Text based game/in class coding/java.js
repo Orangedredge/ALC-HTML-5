@@ -29,6 +29,22 @@ var turnorder = 0;
 
 
 
+	//this detels enemey location and if you have fought them
+	var enemeyL={
+		slime1:0,
+		slime2:0,
+
+	}
+	//these are varables relating to an enemey
+	var slime ={
+		health:10,
+		attack: 1,
+		slime: "slime",
+	}
+
+
+
+
 // invintory testing
 var invintory = ["nothing","nothing","nothing","nothing","nothing","nothing"]
 var inv ={
@@ -245,21 +261,37 @@ function Lc(x,y){
 	}else if(x == 2 && y == 0){
 		px = x;
 		py = y;
-		if (slime.health <= 0){
+		switch (enemeyL.slime1){
+			case 1:
 			alert("you may go south and west you can now see light coming to your south");
+			check(x,y);
+			break;
 
-
-		}else{
+			case 0:
 			alert("a group of slimes come out to attacks you   ");
+			slime.health = 10;
+			turnorder = 0;
+
 			Combat(slime.slime);
+			break;
+			default:
+			alert("computer: you have broke my code and i dont know what to do");
+			alert(enemeyL.slime1)
+		
+			break;
 		}
 		
 		
-	}else if(x == -1 && y == 0){
+	}else if(x == 2 && y == -1){
 		px = x;
 		py = y;
-		alert("");
+		alert("you can now see th end of the cave to your south");
 		check(x,y);
+
+
+
+
+		
 	}else{
 
 	
@@ -293,13 +325,11 @@ function Lc(x,y){
 
 
 
-var slime ={
-	health:10,
-	attack: 1,
-	slime: "slime",
-}
+
+
 
 var currentE = ""
+//This is the check of combat
 
 function combatcheck(enemeyhealth){
 	
@@ -307,20 +337,31 @@ function combatcheck(enemeyhealth){
 	if (combatcheck == "attack"){
 		
 		alert("attack function runing");
-		enemeyhealth -= level * 1.25;
+		enemeyhealth -= 4 *(level * 1.25);
 		if (currentE == "slime"){
 			slime.health = enemeyhealth;
 		}
 		alert(enemeyhealth);
 		alert(slime.health);
 		
+		
 		if (enemeyhealth <= 0){
-			Lc(x,y);
+			if (enemeyL.slime1 = 0){
+				enemeyL.slime1 = 1;
+				Lc(px,py);
+				
+			}else if(enemeyL.slime2){
+				enemeyL.slime2 = 1;
+			}
+			
+			Lc(px,py);
+			
 
 
 		}else{
 			
 			turnorder = 1;
+			alert(currentE);
 			Combat(currentE);
 		}
 		
@@ -335,9 +376,11 @@ function combatcheck(enemeyhealth){
 
 
 function Combat(enemey){
-	alert("runing combat")
+	alert("function combat")
 	if (turnorder == 0){
 		alert("turnorder = 0");
+		alert(currentE);
+		alert(enemey);
 		if(enemey == slime.slime){
 			
 			currentE = "slime";
@@ -355,7 +398,7 @@ function Combat(enemey){
 		health -= 1;
 		alert(health);
 		turnorder = 0;
-		Combat(slime.health);
+		Combat(currentE);
 		//}
 		
 
@@ -375,3 +418,13 @@ if (confirm("Would you like to \nplay the game")) {
     alert('OK \ if you wish to play again');
   }
 
+//switch (){
+//	case:
+//	break;
+//  	default:
+//}
+
+
+
+
+//Math.floor(Math.random()* 4);
