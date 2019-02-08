@@ -292,6 +292,36 @@ function Lc(x,y){
 
 
 		
+	}else if(x == 2 && y == -2){
+		px = x;
+		py = y;
+		switch (enemeyL.slime2){
+			
+			case 1:
+			alert("you exit the cave you see a house to you west and plains to your east");
+			check(x,y);
+			break;
+
+			case 0:
+			alert("befor you leave a group of slimes come out to attacks you   ");
+			alert(enemeyL.slime2);
+			slime.health = 10;
+			turnorder = 0;
+
+			Combat(slime.slime);
+			break;
+			default:
+			alert("computer: you have broke my code and i dont know what to do");
+			alert(enemeyL.slime2)
+		
+			break;
+		}
+		check(x,y);
+
+
+
+
+		
 	}else{
 
 	
@@ -333,35 +363,38 @@ var currentE = ""
 
 function combatcheck(enemeyhealth){
 	
-	var combatcheck = prompt("what would you like to do" )
+	var combatcheck = prompt("what would you like to do" );
 	if (combatcheck == "attack"){
 		
-		alert("attack function runing");
+		
 		enemeyhealth -= 4 *(level * 1.25);
 		if (currentE == "slime"){
 			slime.health = enemeyhealth;
 		}
-		alert(enemeyhealth);
-		alert(slime.health);
+		alert("you attack and leave the slime at "+enemeyhealth);
 		
 		
 		if (enemeyhealth <= 0){
-			if (enemeyL.slime1 = 0){
+			
+			if (px == 2 && py == 0){
 				enemeyL.slime1 = 1;
 				Lc(px,py);
 				
-			}else if(enemeyL.slime2){
+			}else if(px == 2 && py == -2){
 				enemeyL.slime2 = 1;
+				Lc(px,py);
+			}else{
+				alert("you have just broke my code");
 			}
 			
-			Lc(px,py);
+			
 			
 
 
 		}else{
 			
 			turnorder = 1;
-			alert(currentE);
+			
 			Combat(currentE);
 		}
 		
@@ -376,15 +409,13 @@ function combatcheck(enemeyhealth){
 
 
 function Combat(enemey){
-	alert("function combat")
+	
 	if (turnorder == 0){
-		alert("turnorder = 0");
-		alert(currentE);
-		alert(enemey);
+		
 		if(enemey == slime.slime){
 			
 			currentE = "slime";
-			alert(slime.health);
+			
 			combatcheck(slime.health);
 		}
 			
@@ -396,7 +427,7 @@ function Combat(enemey){
 			
 			
 		health -= 1;
-		alert(health);
+		alert("slime attacks you and leaves you at"+health);
 		turnorder = 0;
 		Combat(currentE);
 		//}
