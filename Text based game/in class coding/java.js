@@ -89,7 +89,12 @@ function check(x,y){
 	}else if(check == "devoption"){
 		dev = 1;
 		Lc(x,y);
-	}else if (check == "set xy" && dev == 1){
+	}else if (check == "set level" && dev == 1){
+		level = prompt("what your level be");
+		
+		Lc(x,y)
+	//iteam pick up
+}else if (check == "set xy" && dev == 1){
 		x = prompt("what will x be");
 		y = prompt("what will y be");
 		Lc(x,y)
@@ -285,7 +290,7 @@ function Lc(x,y){
 	}else if(x == 2 && y == -1){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("you can now see thee end of the cave to your south");
 		check(x,y);
 
 
@@ -316,6 +321,250 @@ function Lc(x,y){
 		
 			break;
 		}
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 1 && y == -3){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 3 && y == -3){
+		px = x;
+		py = y;
+		alert("you move closer to the plains they are now just to you east \n you may move east and west");
+		check(x,y);
+
+
+
+
+// this is the first layer of the plains
+//so x = 4 in plains
+		
+	}else if(x == 4 && y == 0){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 4 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 4 && y == -2){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 4 && y == -3){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 4 && y == -4){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		//this is layer two of the plains
+		//or x = 5 in plains
+	}else if(x == 5 && y == 0){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 5 && y == -1){
+		px = x;
+		py = y;
+		alert("you can move in any direction exit to east south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 5 && y == -2){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 5 && y == -3){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		//this is layer 3 of plains
+		//or x = 6
+	}else if(x == 6 && y == 0){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 6 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 6 && y == -2){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 6 && y == -3){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 6 && y == -4){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		//layer 4 or x = 7
+	}else if(x == 7 && y == 0){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 7 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 7 && y == -2){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 7 && y == -3){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 7 && y == -4){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -3){
+		px = x;
+		py = y;
+		alert("you exit ");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
 		check(x,y);
 
 
@@ -422,11 +671,11 @@ function Combat(enemey){
 
 	}else if (enemey == slime.slime && turnorder == 1){
 		
-		//var enemeyrandom = Math.floor(Math.random() * 3);
+		var enemeyrandom = Math.floor(Math.random()* 4);
 		//if (enemeyrandom <= 2){
 			
 			
-		health -= 1;
+		health -= enemeyrandom;
 		alert("slime attacks you and leaves you at"+health);
 		turnorder = 0;
 		Combat(currentE);
@@ -458,4 +707,4 @@ if (confirm("Would you like to \nplay the game")) {
 
 
 
-//Math.floor(Math.random()* 4);
+//Math.floor(Math.random(
