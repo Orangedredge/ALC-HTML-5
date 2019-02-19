@@ -4,6 +4,13 @@ var y = 0;
 var px = 0;
 var py = 0;
 var dev = 0;
+var inn = false;
+//var move = true;
+//var pmove = false;
+//var mwest = false;
+//var msouth = fasle;
+//var mnorth = false;
+///var meast = flase;
 //iteam variables which store the iteams location
 //sword
 var zword = false
@@ -78,6 +85,20 @@ function check(x,y){
 		  }
 		Lc(x,y);
 	
+	}else if(check == "talk" && x == 9 && y == -2){
+		alert("vilager: so you good at fighing well i have a proposal for you.\n a monster has been teoirising are village to the south east if you go out and take it out for use we will reward you hansomely plus as long as you agree to fight the monster we will allow you free accses to the  inn in town");
+		check = (prompt("will you take up his offer"));
+		alert(check);
+		if (check == "yes" || check == 0 || check == ""){
+			alert("the vilagers hand you a pass to get you into the inn for free you most now fight the monster which is one south two east");
+			inn = true;
+
+		}else{
+			alert("oh well i guess no harm in asking you");
+		}
+		
+		Lc(x,y);
+		
 	}else if(check == "end"){
 		alert("game ended");
 	
@@ -189,6 +210,7 @@ function check(x,y){
 }
 // this functino is used for checking location
 function Lc(x,y){
+	
 	if (dev == 1){
 		alert(x);
 		alert(y);
@@ -207,10 +229,16 @@ function Lc(x,y){
 
 
 	}else if(x == -1 && y == 0){
-		px = x;
+		if (move == true){
+			px = x;
 		py = y;
 		alert("you are in the cave and can go east, west also there may be an exit to your east")
 		check(x,y);
+		}else{
+			
+			return true
+		}
+		
 
 
 
@@ -352,7 +380,7 @@ function Lc(x,y){
 	}else if(x == 4 && y == 0){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("you are in the top coner of the plains and are able to move south and east");
 		check(x,y);
 
 
@@ -362,7 +390,7 @@ function Lc(x,y){
 	}else if(x == 4 && y == -1){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert(" you may move east north and south");
 		check(x,y);
 
 
@@ -372,7 +400,7 @@ function Lc(x,y){
 	}else if(x == 4 && y == -2){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert(" you may move east north and south");
 		check(x,y);
 
 
@@ -382,7 +410,7 @@ function Lc(x,y){
 	}else if(x == 4 && y == -3){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("you may move east north and south");
 		check(x,y);
 
 
@@ -392,7 +420,7 @@ function Lc(x,y){
 	}else if(x == 4 && y == -4){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("you are in bottom of plains may move east north");
 		check(x,y);
 
 
@@ -403,7 +431,7 @@ function Lc(x,y){
 	}else if(x == 5 && y == 0){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("you are at the top of the plains and can move in any south east and west ");
 		check(x,y);
 
 
@@ -413,7 +441,7 @@ function Lc(x,y){
 	}else if(x == 5 && y == -1){
 		px = x;
 		py = y;
-		alert("you can move in any direction exit to east south");
+		alert("eyou can move in any direction");
 		check(x,y);
 
 
@@ -423,7 +451,7 @@ function Lc(x,y){
 	}else if(x == 5 && y == -2){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert(" you can move in any direction");
 		check(x,y);
 
 
@@ -433,7 +461,7 @@ function Lc(x,y){
 	}else if(x == 5 && y == -3){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("you can move in any direction");
 		check(x,y);
 
 
@@ -444,7 +472,7 @@ function Lc(x,y){
 	}else if(x == 6 && y == 0){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("exit to plains east you are at the top of the plains and can move south east and west");
 		check(x,y);
 
 
@@ -454,7 +482,7 @@ function Lc(x,y){
 	}else if(x == 6 && y == -1){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("exit to plains east you can move in any direction");
 		check(x,y);
 
 
@@ -464,7 +492,7 @@ function Lc(x,y){
 	}else if(x == 6 && y == -2){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("exit to plains east you can move in any direction");
 		check(x,y);
 
 
@@ -474,7 +502,7 @@ function Lc(x,y){
 	}else if(x == 6 && y == -3){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("exit to plains east you can move in any direction");
 		check(x,y);
 
 
@@ -484,7 +512,7 @@ function Lc(x,y){
 	}else if(x == 6 && y == -4){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("you are at the bottom of the plains and can move north east and west");
 		check(x,y);
 
 
@@ -541,10 +569,119 @@ function Lc(x,y){
 
 
 		
-	}else if(x == 2 && y == -3){
+	}else if(x == 8 && y == -2){
 		px = x;
 		py = y;
-		alert("you exit ");
+		alert("you exit the plains you are now in a town the viligers acomidate and ask you if you are skilled at combat and say if you are to go talk to the at town center\n the inn is just east and then north to where you are now \n you may also be able to talk to viligers in the town square just east \n you may move west(to the plains)\n or east to town center");
+
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 9 && y == -2){
+		px = x;
+		py = y;
+		alert("you enter in the center of town you can move in any direction you may also talk to the vilagers");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 9 && y == -3){
+		px = x;
+		py = y;
+		alert("you are still in town you may move north south and east");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 9 && y == -1){
+		px = x;
+		py = y;
+		if (inn == true){
+			if (prompt("would you like to sleep in the inn \n yes or no") == "yes"){
+
+			}else{
+				alert("you do not sleep in the inn if you want to just leave and come back");
+			}
+		}
+		alert("you may move south to the village center");
+
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 10 && y == -2){
+		px = x;
+		py = y;
+		alert("you are still in the town the monster is to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
+		check(x,y);
+
+
+
+
+		
+	}else if(x == 2 && y == -1){
+		px = x;
+		py = y;
+		alert("you can now see th end of the cave to your south");
 		check(x,y);
 
 
@@ -675,7 +812,7 @@ function Combat(enemey){
 		//if (enemeyrandom <= 2){
 			
 			
-		health -= enemeyrandom;
+		health -= enemeyrandom * slime.attack;
 		alert("slime attacks you and leaves you at"+health);
 		turnorder = 0;
 		Combat(currentE);
@@ -685,7 +822,15 @@ function Combat(enemey){
 	}
 	
 }
+function dedinside(x,y){
+	move = false;
+	x -= 1
+	pmove = Lc(x,y);
+	if (pmove == true);
+	
+	
 
+}
 
 
 
