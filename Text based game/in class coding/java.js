@@ -5,6 +5,9 @@ var px = 0;
 var py = 0;
 var dev = 0;
 var inn = false;
+const nothing = "nothing"
+var alive = true;
+var boss
 //var move = true;
 //var pmove = false;
 //var mwest = false;
@@ -13,7 +16,7 @@ var inn = false;
 ///var meast = flase;
 //iteam variables which store the iteams location
 //sword
-var zword = false
+var zword = false;
 var swordx = 0;
 var swordy = -1;
 
@@ -40,6 +43,7 @@ var turnorder = 0;
 	var enemeyL={
 		slime1:0,
 		slime2:0,
+		slimeB:false,
 
 	}
 	//these are varables relating to an enemey
@@ -89,7 +93,7 @@ function check(x,y){
 		alert("vilager: so you good at fighing well i have a proposal for you.\n a monster has been teoirising are village to the south east if you go out and take it out for use we will reward you hansomely plus as long as you agree to fight the monster we will allow you free accses to the  inn in town");
 		check = (prompt("will you take up his offer"));
 		alert(check);
-		if (check == "yes" || check == 0 || check == ""){
+		if (check == "yes" || check == 0){
 			alert("the vilagers hand you a pass to get you into the inn for free you most now fight the monster which is one south two east");
 			inn = true;
 
@@ -121,8 +125,8 @@ function check(x,y){
 		Lc(x,y)
 	//iteam pick up
 }else if (check == "pick up sword" && swordx == x && swordy == y){
-	var i;
-	var j;
+	let i;
+	let j;
 	for (i = 0;i <6; ++i){
 		if (invintory[i] == "sword"){
 			alert("you allready have the sword");
@@ -134,22 +138,22 @@ function check(x,y){
 			zword = false;
 		}
 			
-		alert("this is a test")
+		//alert("this is a test")
 		}
-		alert("this is a test2")
+		//alert("this is a test2")
 	if (zword == false){
-		var i = 0;
+		let i = 0;
 		for (i = 0; i <6; ++i){
-			alert("this is test 3")
+		//	alert("this is test 3")
 			if (invintory[i] == "nothing"){
-				alert("this is test 4")
+				//alert("this is test 4")
 				invintory[i] = "sword"
 				i += 6
 				zword = true;
 				
 				alert("you picked up the sword")
 				Lc(x,y);
-				alert("test 6")
+				//alert("test 6")
 			}else{
 				
 				
@@ -172,18 +176,18 @@ function check(x,y){
 				book = false;
 			}
 				
-			alert("this is a test")
+			//alert("this is a test")
 			}
-			alert("this is a test2")
+			//alert("this is a test2")
 		if (book == false){
 			var i = 0;
 			for (i = 0; i <7; ++i){
-				alert("this is test 3")
+				//alert("this is test 3")
 				if (i == 6 ){
 					alert("not enough room")
 				}
 				if (invintory[i] == "nothing"){
-					alert("this is test 4")
+					//alert("this is test 4")
 					invintory[i] = "book"
 					i += 6
 					
@@ -198,7 +202,7 @@ function check(x,y){
 			}
 		}
 		
-	
+		
 	
 	
 	check(x,y);
@@ -208,6 +212,16 @@ function check(x,y){
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
 // this functino is used for checking location
 function Lc(x,y){
 	
@@ -229,15 +243,12 @@ function Lc(x,y){
 
 
 	}else if(x == -1 && y == 0){
-		if (move == true){
-			px = x;
+		
+		px = x;
 		py = y;
 		alert("you are in the cave and can go east, west also there may be an exit to your east")
 		check(x,y);
-		}else{
-			
-			return true
-		}
+		
 		
 
 
@@ -246,7 +257,7 @@ function Lc(x,y){
 		px = x;
 		py = y;
 		if (zword == false){
-			alert("you enter a small area with a rusted sword on the ground and may move to the north");
+			alert("you enter a small area with a rusted sword on the ground and may move to the north and pick up sword");
 		
 		}else{
 			alert("you enter a small area and may move to the north");
@@ -278,11 +289,22 @@ function Lc(x,y){
 		var i;
 		for (i = 0; i < 6; i++) { 
 			if (invintory[i] == "book"){
+
+
+
+
 				alert("nothing to see in here it is a dead end you may go south");
+
 				check(x,y);
 
 			}else{
+
+
+
 				alert("it is dead end but there is a book lying on the ground ");
+
+
+
 				check(x,y);
 
 			}
@@ -605,7 +627,8 @@ function Lc(x,y){
 		py = y;
 		if (inn == true){
 			if (prompt("would you like to sleep in the inn \n yes or no") == "yes"){
-
+				health = 20;
+				alert("you health is now at max"); 
 			}else{
 				alert("you do not sleep in the inn if you want to just leave and come back");
 			}
@@ -628,30 +651,43 @@ function Lc(x,y){
 
 
 		
-	}else if(x == 2 && y == -1){
+	}else if(x == 10 && y == -3){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("the monster is now just to your east you may move east west and north");
 		check(x,y);
 
 
 
 
 		
-	}else if(x == 2 && y == -1){
+	}else if(x == 9 && y == -3){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		alert("town monster is to the east you may move south east and north");
 		check(x,y);
 
 
 
 
 		
-	}else if(x == 2 && y == -1){
+	}else if(x == 11 && y == -3){
 		px = x;
 		py = y;
-		alert("you can now see th end of the cave to your south");
+		if (enemeyL.slimeB == false){
+			alert("The Towns menace comes out to fight");
+			slime.attack = 4;
+			slime.health = 20;
+			turnorder = 0;
+			Combat(slime.slime);
+
+		}else{
+			slime.attack = 1;
+			alert("you have beat this game i dont have anywhere else so if you type in devoption you will be given accsses to commands set xy and set level feel free to mess around if you ");
+
+			check(x,y);
+		}
+		alert("you sould not see this alert");
 		check(x,y);
 
 
@@ -746,102 +782,137 @@ function Lc(x,y){
 
 var currentE = ""
 //This is the check of combat
-
-function combatcheck(enemeyhealth){
-	
-	var combatcheck = prompt("what would you like to do" );
-	if (combatcheck == "attack"){
-		
-		
-		enemeyhealth -= 4 *(level * 1.25);
-		if (currentE == "slime"){
-			slime.health = enemeyhealth;
+if (alive == true){
+	function combatcheck(enemeyhealth){
+		if (health <= 0){
+			Death();
 		}
-		alert("you attack and leave the slime at "+enemeyhealth);
 		
-		
-		if (enemeyhealth <= 0){
-			
-			if (px == 2 && py == 0){
-				enemeyL.slime1 = 1;
-				Lc(px,py);
-				
-			}else if(px == 2 && py == -2){
-				enemeyL.slime2 = 1;
-				Lc(px,py);
-			}else{
-				alert("you have just broke my code");
-			}
-			
-			
-			
-
-
-		}else{
-			
+		var combatcheck = prompt("what would you like to do you may attack and nothing" );
+		if(combatcheck == "nothing"){
 			turnorder = 1;
-			
 			Combat(currentE);
 		}
-		
-	
-	}else{
-		alert("can not do that star fox");
-		Combat(currentE)
 
-	}
-
-}
-
-
-function Combat(enemey){
-	
-	if (turnorder == 0){
-		
-		if(enemey == slime.slime){
+		if (combatcheck == "attack"){
 			
-			currentE = "slime";
 			
-			combatcheck(slime.health);
+			enemeyhealth -= 4 *(level * 1.25);
+			if (currentE == "slime"){
+				slime.health = enemeyhealth;
+			}
+			alert("you attack and leave the slime at "+enemeyhealth);
+			
+			
+			if (enemeyhealth <= 0){
+				
+				if (px == 2 && py == 0){
+					enemeyL.slime1 = 1;
+					Lc(px,py);
+					
+				}else if(px == 2 && py == -2){
+					enemeyL.slime2 = 1;
+					Lc(px,py);
+					
+				}else if(px == 11 && py == -3){
+					enemeyL.slimeB = true;
+					Lc(px,py);
+					
+				}else{
+					alert("you have just broke my code");
+				}
+				
+				
+				
+			
+			
+
+			}else{
+				
+				turnorder = 1;
+				
+				Combat(currentE);
+			}
+			
+		
+		}else{
+			alert("you can not do that");
+			Combat(currentE)
+
 		}
-			
-
-	}else if (enemey == slime.slime && turnorder == 1){
-		
-		var enemeyrandom = Math.floor(Math.random()* 4);
-		//if (enemeyrandom <= 2){
-			
-			
-		health -= enemeyrandom * slime.attack;
-		alert("slime attacks you and leaves you at"+health);
-		turnorder = 0;
-		Combat(currentE);
-		//}
-		
 
 	}
-	
 }
-function dedinside(x,y){
-	move = false;
-	x -= 1
-	pmove = Lc(x,y);
-	if (pmove == true);
-	
-	
+if (alive == true){
+	function Combat(enemey){
+		
+		if (turnorder == 0){
+			
+			if(enemey == slime.slime){
+				
+				
+				currentE = "slime";
+				
+				combatcheck(slime.health);
+			}
+				
+
+		}else if (enemey == slime.slime && turnorder == 1){
+			
+			var enemeyrandom = Math.floor(Math.random()* 4);
+			//if (enemeyrandom <= 2){
+				
+				
+			health -= enemeyrandom * slime.attack;
+			alert("slime attacks you and leaves you at"+health);
+			turnorder = 0;
+			Combat(currentE);
+			//}
+			
+
+		}
+		
+	}
 
 }
 
+function Death(){
+	alert("you are super dead");
+	x = 0;
+	y = 0;
+	px = 0;
+	py = 0;
+	invintory[0] = "nothing";
+	invintory[1] = "nothing";
+	alert("rip");
+	alert("refresh page");
+	alive = false;
+	Killgame();
 
+}
+function Killgame(){
+	Killgame2();
+}
+function Killgame2(){
+	Killgame();
+}
+var rungame = false;
+while(!rungame){
+ if(confirm("Would you like to \nplay the game")){
+	const name = prompt("what would you like your name to be");
+	alert ("your name is "+ name );
+	rungame = true;
+	Lc(0,0);
 
-
-
-if (confirm("Would you like to \nplay the game")) {
-	alert("you wake up in a cave,\n you have no memory and nothing but cloth on \n you can feel wind coming to your east but it might be good to explore some more \n your opion are east/e, west/w, south/s,north/n, inventory/iteam");
-    Lc(x,y);
-  } else {
-    alert('OK \ if you wish to play again');
-  }
+	
+	
+ }else{
+	alert("Ok");
+ }
+	
+  
+  
+}
 
 //switch (){
 //	case:
