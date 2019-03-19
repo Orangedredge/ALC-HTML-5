@@ -61,6 +61,47 @@
                 <li class="colection-item">
                     <a href="#">beth</a>
                 </li>
+                <li class="colection-item">
+                    <a href="#">ben</a>
+                </li>
+                <li class="colection-item">
+                    <a href="#">ban</a>
+                </li>
+
+                <li class="collection-header">
+                    <h5> C </h5>
+    
+                </li>
+
+                <li class="colection-item">
+                    <a href="#">Chris</a>
+                </li>
+                <li class="colection-item">
+                    <a href="#">Crock</a>
+                </li>
+                <li class="colection-item">
+                    <a href="#">Cuss</a>
+                </li>
+                <li class="colection-item">
+                    <a href="#">cluck</a>
+                </li>
+                <li class="collection-header">
+                    <h5> D </h5>
+    
+                </li>
+                <li class="colection-item">
+                    <a href="#">Dan</a>
+                </li>
+                <li class="colection-item">
+                    <a href="#">David</a>
+                </li>
+                <li class="colection-item">
+                    <a href="#">Devon</a>
+                </li>
+                <li class="collection-header">
+                    <h5> E </h5>
+    
+                </li>
 
 
 
@@ -71,6 +112,45 @@
 
         </div>
     </body>
+    <script>
+    	let filterInput = document.getElementById('filterInput');
+
+
+        filterInput.addEventListener('keyup',filterNames);
+
+
+        function filterNames(){
+            let filterValue = document.getElementById('filterInput').value.toUpperCase();
+
+
+            let ul = document.getElementById('names');
+
+            let li = ul.querySelectorAll('li.collection-item');
+
+
+            for(let i = 0;i < li.length;i++){
+                let a = li[i].getElementsByTagName('a')[0];
+
+                if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                    li[i].style.display = '';
+
+
+                }else{
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+</Script>
+
+
+
+
+
+
+
+
+
 
 
 
