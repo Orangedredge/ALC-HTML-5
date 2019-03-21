@@ -5,8 +5,8 @@
     <style type="text/css">
     
         body{
-
-        background-color:hotpink;
+            
+            background-color:hotpink;
             margin:0;
         
         
@@ -24,17 +24,48 @@
         }
         #box{
             background-color:black;
-            width:200px;
+            width:100px;
             height:100px;
             position:absolute;
             left: 500px;
-            right: 500px;
+            
             
         }
         #round{
-            background-color:aqua;
+            width: 100px;
+            height: 100px;
+            background-color:black;
             border-radius: 100%;
-            align-items: right; 
+            position: absolute;
+            left: 200px;
+            
+            
+         
+        }
+        #triangel{
+            height: 0;
+            width: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid black;
+            position: absolute;
+            left: 700;
+            
+        }
+        #image:HOVER{
+            display: block;
+            width:auto;
+            height:auto;
+            border: solid 5px red;
+            border-radius: 100%;
+            box-shadow: 10px 10px 99px ;
+            transition: 1S;
+            
+        }
+        #image{
+            display: block;
+            width:auto;
+            height:auto;
         }
     
     
@@ -52,6 +83,8 @@
     <h1>CSS EXERCISES</h1>
     <div id=box></div>
     <div id=round></div>
+    <div id=triangel></div>
+    <img src="Kucks.jpg" id="image">
     <h3>Dose not mater what I do here</h3>
     
         
