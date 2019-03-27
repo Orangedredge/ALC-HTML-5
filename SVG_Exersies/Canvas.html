@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+    <canvas id="myCanvas" width="9999" height="9999" style="border:1px solid tomato;">
+
+    </canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = 'tomato';
+    ctx.fillRect(0,0,150,100);
+    
+    //draw line
+    ctx.moveTo(999, 0);
+    ctx.lineTo(100, 100);
+    ctx.stroke();
+    //draw circle
+    ctx.beginPath();
+    ctx.arc(95, 200, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+    
+    //grad
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(100,100,150,80);
+    
+    
+    
+    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+    
+    
+    
+    
+    </script>
+
+
+</body>
+
+
+
+</html>
