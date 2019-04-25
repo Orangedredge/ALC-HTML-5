@@ -14,52 +14,57 @@ html,body,div,P,ul,ol,li,h1,h2,h3,h4,h5,h6{
     padding:0;
 
 
-
+/* attempt to not make everything a mess*/
 }
 body{
-    background-color:tomato;
+    background-color:cornsilk;
 }
+
+
 div#container{
-    width:1200px;
-    height:800px;
+    width:100%
+    
     border:3px dashed orange;
     background-color:lawngreen;
 }
 header{
     width:100%;
     padding:50px;
-    background-color:lightblue;
+    background-color:salmon;
 }
 header h1{
-    background-color: dodgerblue;
+    /*background-color:azure;*/
     font-family:fantasy;
     font-size: 20px;
     font-family: 'Iceberg', cursive;
+    float:center;
     
 }
-header h1:hover{
-    font-size: 5000000000000px;
-    
-}
-div#content{
+ontent{
     width:100%;
     background-color:bisque;
     
 }
+
 nav ul{
     list-style: : none;
     
 }
 nav ul li{
-float: left;
-    padding:5px 15px;
-    border-right: 2px solid #000000;
+    float: left;
+    list-style:none;
+    
 
 }
 nav ul li a{
     color: black;
+    display:block;
+    padding:5px 15px;
+    border-right: 2px solid #000000;
+    text-decoration: :none;
+    border: solid;
+    border-radius:99999999999px;
     
-
 }
 nav ul li a:hover{
     background-color: black;
@@ -67,17 +72,30 @@ nav ul li a:hover{
     
 }
 nav{
-    background-color: blueviolet;
-    color:red;
+    background-color: a;
+    color:darkorange;
     font-family:monospace;
     font-size: 1.5em;
 }
 footer{
+    position:fixed;
+    bottom:0;
+    left:0;
     width:100%;
     height:50px;
     background-color:chocolate;
+    
 }
 div.keepOpen{
     clear:both;
 
+}
+@media screen and (max-width:600px) {
+    div#container{
+        width: 100%;
+    }
+    nav ul li a{
+        float:none;
+        text-align:center;
+    }
 }
