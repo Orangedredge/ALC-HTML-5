@@ -45,25 +45,26 @@ ontent{
     background-color:bisque;
     
 }
-
+/*
 nav ul{
     list-style: : none;
     
 }
 nav ul li{
-    float: left;
+    
     list-style:none;
     
 
 }
 nav ul li a{
+    float: left;
     color: black;
     display:block;
     padding:5px 15px;
     border-right: 2px solid #000000;
     text-decoration: :none;
     border: solid;
-    border-radius:99999999999px;
+ 
     
 }
 nav ul li a:hover{
@@ -77,6 +78,8 @@ nav{
     font-family:monospace;
     font-size: 1.5em;
 }
+*/
+/*
 footer{
     position:fixed;
     bottom:0;
@@ -98,4 +101,30 @@ div.keepOpen{
         float:none;
         text-align:center;
     }
+}
+*/
+.icon-bar {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #ffa20e;
 }
