@@ -128,3 +128,10 @@ div.keepOpen{
 .active {
   background-color: #ffa20e;
 }
+header h1{
+    text-align: center;
+}
+header img#product{
+    
+    margin:auto
+}
