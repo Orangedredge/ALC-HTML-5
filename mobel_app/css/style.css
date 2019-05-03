@@ -35,7 +35,7 @@ header{
 header h1{
     /*background-color:azure;*/
     font-family:fantasy;
-    font-size: 20px;
+    font-size: 35px;
     font-family: 'Iceberg', cursive;
     float:center;
     
@@ -132,6 +132,32 @@ header h1{
     text-align: center;
 }
 header img#product{
+    display: block;
+    margin:auto;
     
-    margin:auto
+}
+header img#product:hover{
+    display: block;
+    margin:auto;
+    width:9999px;
+    
+}
+div .content{
+    border:solid;
+    border-color:black;
+    background-color: white;
+    float:left;
+}
+div .content:hover{
+    
+    border:solid;
+    
+    border-color:black;
+    background-color: tan;
+    transition: 1s;
+    float:left;
+}
+div h4 p{
+    font-size: 35px;
+    
 }
