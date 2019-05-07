@@ -93,16 +93,9 @@ div.keepOpen{
     clear:both;
 
 }
-@media screen and (max-width:600px) {
-    div#container{
-        width: 100%;
-    }
-    nav ul li a{
-        float:none;
-        text-align:center;
-    }
-}
 */
+
+
 .icon-bar {
   position:absolute;
   bottom:0;
@@ -145,19 +138,45 @@ header img#product:hover{
 div .content{
     border:solid;
     border-color:black;
+    border-radius: 3px;
     background-color: white;
     float:left;
+    margin: 0px;
+    width:25%;
 }
 div .content:hover{
     
     border:solid;
-    
+    width:20%;
     border-color:black;
     background-color: tan;
     transition: 1s;
     float:left;
+    
 }
 div h4 p{
     font-size: 35px;
+    
+}
+@media screen and (max-width:600px) {
+    div .content{
+    border:solid;
+    border-color:black;
+    border-radius: 0px;
+    background-color: white;
+    width:100%;
+    float:left;
+    margin:2.5%;
+        
+}
+   div .content:hover{
+    
+    border:solid;
+    width:100%;
+    border-color:black;
+    background-color: tan;
+    transition: 1s;
+    float:left;
+} 
     
 }
