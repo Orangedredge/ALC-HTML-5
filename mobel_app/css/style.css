@@ -146,7 +146,7 @@ div .content{
     background-color: white;
     float:left;
     margin: 0px;
-    width:22%;
+    width:23%;
     height: 300px;
     margin-right:20px;
     margin-bottom: 10px
@@ -155,7 +155,7 @@ div .content{
 div .content:hover{
     
     border:solid;
-    width:22%;
+    width:23%;
     border-color:black;
     
     transition: .2s;
@@ -170,6 +170,15 @@ div h4 p{
     font-size: 35px;
     
 }
+p.par{
+    background-color:white;
+    border:solid;
+    border-color: black;
+    border-radius: 7px;
+    float:auto;
+    
+}
+
 @media screen and (max-width:870px) {
     div .content{
     border:solid;
