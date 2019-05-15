@@ -1,1 +1,1 @@
-//script for mobal appppppp
+<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">

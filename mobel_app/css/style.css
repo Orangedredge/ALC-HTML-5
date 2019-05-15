@@ -146,7 +146,7 @@ div .content{
     background-color: white;
     float:left;
     margin: 0px;
-    width:23%;
+    width:22%;
     height: 300px;
     margin-right:20px;
     margin-bottom: 10px
@@ -155,7 +155,7 @@ div .content{
 div .content:hover{
     
     border:solid;
-    width:23%;
+    width:22%;
     border-color:black;
     
     transition: .2s;
@@ -178,6 +178,33 @@ p.par{
     float:auto;
     
 }
+p.part{
+    background-color:white;
+    border:solid;
+    border-color: black;
+    border-radius: 7px;
+    float:auto;
+    
+    
+}
+
+legend, span, input, textarea{
+    display:block;
+    margin:auto;
+    text-align:center;
+    font-family: sans-serif;
+    color:darkgreens;
+    border-color: black;
+    
+}  
+form{
+    background-image: url("tomatos2.jpg");
+    
+    
+    background-size: cover;
+   
+}
+
 
 @media screen and (max-width:870px) {
     div .content{
@@ -195,10 +222,17 @@ p.par{
     border:solid;
     width:100%;
     border-color:black;
-    background-color: tan;
+    background-color: white;
     transition: 1s;
     float:left;
-    margin:10px;
+    box-shadow: 5px 5px 20px black;
+    
 } 
+  
+    
+    
+    
+    
+
     
 }
