@@ -1,0 +1,238 @@
+/* 
+google fonts
+
+font-family: 'Iceberg', cursive;
+
+
+
+
+
+/* stylesheet for mobile App */
+/* Reset */
+html,body,div,P,ul,ol,li,h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+
+
+/* attempt to not make everything a mess*/
+}
+body{
+    background-image: url("p0735xlw.jpg");
+    
+    background-size: cover;
+}
+
+
+div#container{
+    width:100%
+    
+    border:3px dashed orange;
+    
+}
+header{
+    width:100%;
+    padding:50px;
+    background-color: beige
+
+}
+header h1{
+    /*background-color:azure;*/
+    font-family:fantasy;
+    font-size: 35px;
+    font-family: 'Iceberg', cursive;
+    float:center;
+    
+}
+ontent{
+    width:100%;
+    background-color:bisque;
+    
+}
+/*
+nav ul{
+    list-style: : none;
+    
+}
+nav ul li{
+    
+    list-style:none;
+    
+
+}
+nav ul li a{
+    float: left;
+    color: black;
+    display:block;
+    padding:5px 15px;
+    border-right: 2px solid #000000;
+    text-decoration: :none;
+    border: solid;
+ 
+    
+}
+nav ul li a:hover{
+    background-color: black;
+    color:white;
+    
+}
+nav{
+    background-color: a;
+    color:darkorange;
+    font-family:monospace;
+    font-size: 1.5em;
+}
+*/
+/*
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:50px;
+    background-color:chocolate;
+    
+}
+div.keepOpen{
+    clear:both;
+
+}
+*/
+
+
+.icon-bar {
+position: fixed;
+  
+  bottom:0;
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #ffa20e;
+}
+header h1{
+    text-align: center;
+}
+header img#product{
+    display: block;
+    margin:auto;
+    
+}
+header img#product:hover{
+    display: block;
+    margin:auto;
+    width:9999px;
+    
+}
+div .content{
+    border:solid;
+    border-color:black;
+    border-radius: 3px;
+    background-color: white;
+    float:left;
+    margin: 0px;
+    width:22%;
+    height: 300px;
+    margin-right:20px;
+    margin-bottom: 10px
+    
+}
+div .content:hover{
+    
+    border:solid;
+    width:22%;
+    border-color:black;
+    
+    transition: .2s;
+    float:left;
+    margin-right:20px;
+    
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 20px black;
+    
+}
+div h4 p{
+    font-size: 35px;
+    
+}
+p.par{
+    background-color:white;
+    border:solid;
+    border-color: black;
+    border-radius: 7px;
+    float:auto;
+    
+}
+p.part{
+    background-color:white;
+    border:solid;
+    border-color: black;
+    border-radius: 7px;
+    float:auto;
+    
+    
+}
+
+legend, span, input, textarea{
+    display:block;
+    margin:auto;
+    text-align:center;
+    font-family: sans-serif;
+    color:darkgreens;
+    border-color: black;
+    
+}  
+form{
+    background-image: url("tomatos2.jpg");
+    
+    
+    background-size: cover;
+   
+}
+
+
+@media screen and (max-width:870px) {
+    div .content{
+    border:solid;
+    border-color:black;
+    border-radius: 0px;
+    background-color: white;
+    width:100%;
+    float:left;
+    margin-bottom:10px;
+        
+}
+   div .content:hover{
+    
+    border:solid;
+    width:100%;
+    border-color:black;
+    background-color: white;
+    transition: 1s;
+    float:left;
+    box-shadow: 5px 5px 20px black;
+    
+} 
+  
+    
+    
+    
+    
+
+    
+}
